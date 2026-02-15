@@ -13,12 +13,14 @@ export default function Input() {
       }
     }
     ref.current.value = '';
+    window.scrollTo(0, document.body.scrollHeight);
   };
 
   useEffect(() => {
     document.addEventListener('keydown', (event) => {
       if (event.ctrlKey || event.metaKey) return;
       ref.current?.focus();
+      window.scrollTo(0, document.body.scrollHeight);
     });
   }, []);
 
