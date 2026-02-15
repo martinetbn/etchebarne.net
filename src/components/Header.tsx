@@ -1,25 +1,42 @@
 export default function Header() {
   return (
-    <pre className="text-accent leading-4.5 tracking-tighter font-bold">
-      {
-        "          .           '||              '||                                       "
-      }
+    <div className="flex flex-col">
+      <pre className="text-accent leading-4.5 tracking-tighter font-bold">
+        {
+          "          .           '||              '||                                       "
+        }
+        <br />
+        {
+          '  ....  .||.    ....   || ..     ....   || ...   ....   ... ..  .. ...     ....  '
+        }
+        <br />
+        {
+          ".|...||  ||   .|   ''  ||' ||  .|...||  ||'  || '' .||   ||' ''  ||  ||  .|...|| "
+        }
+        <br />
+        {
+          "||       ||   ||       ||  ||  ||       ||    | .|' ||   ||      ||  ||  ||"
+        }
+        <br />
+        {
+          " '|...'  '|.'  '|...' .||. ||.  '|...'  '|...'  '|..'|' .||.    .||. ||.  '|...'"
+        }
+      </pre>
       <br />
-      {
-        '  ....  .||.    ....   || ..     ....   || ...   ....   ... ..  .. ...     ....  '
-      }
-      <br />
-      {
-        ".|...||  ||   .|   ''  ||' ||  .|...||  ||'  || '' .||   ||' ''  ||  ||  .|...|| "
-      }
-      <br />
-      {
-        "||       ||   ||       ||  ||  ||       ||    | .|' ||   ||      ||  ||  ||"
-      }
-      <br />
-      {
-        " '|...'  '|.'  '|...' .||. ||.  '|...'  '|...'  '|..'|' .||.    .||. ||.  '|...'"
-      }
-    </pre>
+      <pre>
+        welcome to etchebarne.net,
+        <br />
+        type "help" to get started.
+        <br />
+        <br />
+        for inquires:{' '}
+        <a
+          href="mailto:martin@etchebarne.net"
+          className="text-accent underline font-semibold"
+        >
+          martin@etchebarne.net
+        </a>
+      </pre>
+    </div>
   );
 }
