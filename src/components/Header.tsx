@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <pre className="text-accent">
+    <pre className="text-accent leading-4.5 tracking-tighter font-bold">
       {
         "          .           '||              '||                                       "
       }
