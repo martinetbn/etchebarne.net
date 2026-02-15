@@ -5,6 +5,6 @@ import { pluginReact } from '@rsbuild/plugin-react';
 export default defineConfig({
   plugins: [pluginReact()],
   html: {
-    title: 'etchebarne.net',
+    template: './src/index.html',
   },
 });
