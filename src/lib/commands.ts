@@ -1,3 +1,5 @@
+import helpHandler from '../commands/help';
+
 type Command = {
   description: string;
   handler: () => void;
@@ -6,9 +8,7 @@ type Command = {
 const commands: Record<string, Command> = {
   help: {
     description: 'show this message',
-    handler: () => {
-      console.log('help triggered');
-    },
+    handler: helpHandler,
   },
 };
 

@@ -1,3 +1,3 @@
 import { atom } from 'jotai';
 
-export const contentAtom = atom([]);
+export const contentAtom = atom<string[]>([]);
