@@ -1,1 +1,32 @@
 @import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(0.9521 0 0);
+  --foreground: oklch(0.2046 0 0);
+  --accent: oklch(0.6823 0.1213 264.36);
+}
+
+.dark {
+  --background: oklch(0.2046 0 0);
+  --foreground: oklch(0.9521 0 0);
+  --acent: oklch(0.6823 0.1213 264.36);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --font-ibm: 'IBM Plex Mono', monospace;
+}
+
+@layer base {
+  * {
+    @apply font-ibm;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
