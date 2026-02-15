@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <div className="flex flex-col">
-      <pre className="text-accent leading-4.5 tracking-tighter font-bold">
+      <pre className="text-[min(1rem,2cqw)] text-accent leading-[1.125] tracking-tighter font-bold">
         {
           "          .           '||              '||                                       "
         }
