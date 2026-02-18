@@ -1,5 +1,6 @@
 import clearHandler from '../commands/clear';
 import helpHandler from '../commands/help';
+import dateHandler from '../commands/date';
 
 type Command = {
   description: string;
@@ -14,6 +15,10 @@ const commands: Record<string, Command> = {
   clear: {
     description: 'clear the screen',
     handler: clearHandler,
+  },
+  date: {
+    description: 'my local date compared to yours',
+    handler: dateHandler,
   },
 };
 
