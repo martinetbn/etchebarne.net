@@ -1,12 +1,18 @@
 import { useEffect, useRef } from 'react';
+import { useAtom } from 'jotai';
+import { contentAtom } from '../atoms/contentAtoms';
 import commands from '../lib/commands';
+import { prefix } from '../lib/config';
 
 export default function Input() {
+  const [, setContent] = useAtom(contentAtom);
+
   const ref = useRef<HTMLInputElement>(null);
 
   const onSubmit = (event: React.SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!ref.current?.value) return;
+    setContent((prev) => [...prev, prefix + ref.current?.value]);
     for (const command in commands) {
       if (ref.current.value === command) {
         commands[command].handler();

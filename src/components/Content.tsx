@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useAtom } from 'jotai';
 import { contentAtom } from '../atoms/contentAtoms';
+import { prefix } from '../lib/config';
 
 export default function Content() {
   const [content] = useAtom(contentAtom);
@@ -13,9 +14,16 @@ export default function Content() {
 
   return (
     <div className="flex flex-col">
-      {content.map((line, index) => (
-        <pre key={index}>{line}</pre>
-      ))}
+      {content.map((line, index) =>
+        line.startsWith(prefix) ? (
+          <div className="flex flex-nowrap" key={index}>
+            <pre className="text-accent">{prefix}</pre>
+            <pre>{line.slice(prefix.length)}</pre>
+          </div>
+        ) : (
+          <pre key={index}>{line}</pre>
+        ),
+      )}
     </div>
   );
 }

@@ -4,7 +4,7 @@ import Content from './components/Content';
 
 export default function App() {
   return (
-    <div className="max-w-3xl mx-auto px-4 py-8 wrap-anywhere space-y-4">
+    <div className="max-w-3xl mx-auto px-4 py-8 wrap-anywhere">
       <Header />
       <Content />
       <Input />
