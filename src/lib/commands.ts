@@ -1,6 +1,7 @@
 import clearHandler from '../commands/clear';
 import helpHandler from '../commands/help';
 import dateHandler from '../commands/date';
+import socialsHandler from '../commands/socials';
 
 type Command = {
   description: string;
@@ -19,6 +20,10 @@ const commands: Record<string, Command> = {
   date: {
     description: 'my local date compared to yours',
     handler: dateHandler,
+  },
+  socials: {
+    description: 'get a link to all my socials',
+    handler: socialsHandler,
   },
 };
 
