@@ -22,7 +22,8 @@
 }
 
 @layer base {
-  * {
+  *,
+  pre {
     @apply font-ibm;
   }
 
